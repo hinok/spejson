@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hinok/spejson.svg?branch=master)](https://travis-ci.org/hinok/spejson)
+
 # Spejson
 
 Responsive spacing mixins and utility classes written in Sass.
