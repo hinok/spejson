@@ -6,3 +6,5 @@ install:
   - yarn install
 script:
   - npm run ci
+after_failure:
+  - ./artifacts.sh backstop_data/bitmaps_test
