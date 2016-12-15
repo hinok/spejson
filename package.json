@@ -7,10 +7,20 @@
     "spacing",
     "responsive",
     "sass",
-    "utility"
+    "utility",
+    "margin",
+    "padding"
   ],
   "author": "Dawid Karabin <mail@hinok.net>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hinok/spejson.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hinok/spejson/issues"
+  },
+  "homepage": "https://github.com/hinok/spejson#readme",
   "scripts": {
     "assets": "cp node_modules/normalize.css/normalize.css demo/normalize.css",
     "backstop-reference": "backstop reference",
