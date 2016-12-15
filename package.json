@@ -22,7 +22,7 @@
     "serve": "live-server ./ --open=demo --port=8000 --ignore=node_modules",
     "serve-ci:start": "forever start server-ci.js",
     "serve-ci:stop": "forever stopall",
-    "ci": "run-s assets build:scss vr:test",
+    "ci": "run-s build:scss vr:test",
     "watch": "run-p assets watch:scss serve"
   },
   "dependencies": {
