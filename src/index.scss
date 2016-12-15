@@ -1,0 +1,144 @@
+$spacing-prefix: 'u-' !default;
+
+$spacing-sizes: (
+  xs: 5px,
+  sm: 10px,
+  md: 15px,
+  lg: 30px,
+  xl: 50px,
+) !default;
+
+$spacing-bp: (
+  'tablet-portrait': 600px,
+  'tablet-landscape': 900px,
+  'desktop': 1200px,
+  'big-desktop': 1800px,
+) !default;
+
+$spacing-scales: (
+  'phone': 1,
+  'tablet-portrait': 1.25,
+  'tablet-landscape': 1.5,
+  'desktop': 1.75,
+  'big-desktop': 2,
+) !default;
+
+@mixin __spacing-m($size-name, $size-value, $scale: 1) {
+  .#{$spacing-prefix}mt-#{$size-name} { margin-top:    $size-value * $scale !important; }
+  .#{$spacing-prefix}mr-#{$size-name} { margin-right:  $size-value * $scale !important; }
+  .#{$spacing-prefix}mb-#{$size-name} { margin-bottom: $size-value * $scale !important; }
+  .#{$spacing-prefix}ml-#{$size-name} { margin-left:   $size-value * $scale !important; }
+}
+
+@mixin __spacing-p($size-name, $size-value, $scale: 1) {
+  .#{$spacing-prefix}pt-#{$size-name} { padding-top:    $size-value * $scale !important; }
+  .#{$spacing-prefix}pr-#{$size-name} { padding-right:  $size-value * $scale !important; }
+  .#{$spacing-prefix}pb-#{$size-name} { padding-bottom: $size-value * $scale !important; }
+  .#{$spacing-prefix}pl-#{$size-name} { padding-left:   $size-value * $scale !important; }
+}
+
+@mixin generate-spacing-center {
+  .#{$spacing-prefix}mc { margin-right: auto !important; margin-left: auto !important; }
+}
+
+@mixin generate-spacing-reset {
+  .#{$spacing-prefix}mt-0 {     margin-top: 0 !important; }
+  .#{$spacing-prefix}mr-0 {   margin-right: 0 !important; }
+  .#{$spacing-prefix}mb-0 {  margin-bottom: 0 !important; }
+  .#{$spacing-prefix}ml-0 {    margin-left: 0 !important; }
+  .#{$spacing-prefix}pt-0 {    padding-top: 0 !important; }
+  .#{$spacing-prefix}pr-0 {  padding-right: 0 !important; }
+  .#{$spacing-prefix}pb-0 { padding-bottom: 0 !important; }
+  .#{$spacing-prefix}pl-0 {   padding-left: 0 !important; }
+}
+
+@mixin generate-spacing-margin {
+  @each $size-name, $size-value in $spacing-sizes {
+    $scale: map-get($spacing-scales, 'phone');
+    @include __spacing-m($size-name, $size-value, $scale);
+  }
+
+  @each $bp-name, $bp-value in $spacing-bp {
+    @media screen and (min-width: #{$bp-value}) {
+      @each $size-name, $size-value in $spacing-sizes {
+        $scale: map-get($spacing-scales, $bp-name);
+        @include __spacing-m($size-name, $size-value, $scale);
+      }
+    }
+  }
+}
+
+@mixin generate-spacing-padding {
+  @each $size-name, $size-value in $spacing-sizes {
+    $scale: map-get($spacing-scales, 'phone');
+    @include __spacing-p($size-name, $size-value, $scale);
+  }
+
+  @each $bp-name, $bp-value in $spacing-bp {
+    @media screen and (min-width: #{$bp-value}) {
+      @each $size-name, $size-value in $spacing-sizes {
+        $scale: map-get($spacing-scales, $bp-name);
+        @include __spacing-p($size-name, $size-value, $scale);
+      }
+    }
+  }
+}
+
+@mixin spacing-abstract($prop, $size-name) {
+  $size: map-get($spacing-sizes, $size-name);
+  $scale: map-get($spacing-scales, 'phone');
+  #{$prop}: $size * $scale !important;
+
+  @each $bp-name, $bp-value in $spacing-bp {
+    @media screen and (min-width: #{$bp-value}) {
+      $scale: map-get($spacing-scales, $bp-name);
+      #{$prop}: $size * $scale !important;
+    }
+  }
+}
+
+@mixin spacing-margin-top($size-name: 'md') {
+  @include spacing-abstract('margin-top', $size-name);
+}
+
+@mixin spacing-margin-right($size-name: 'md') {
+  @include spacing-abstract('margin-right', $size-name);
+}
+
+@mixin spacing-margin-bottom($size-name: 'md') {
+  @include spacing-abstract('margin-bottom', $size-name);
+}
+
+@mixin spacing-margin-left($size-name: 'md') {
+  @include spacing-abstract('margin-left', $size-name);
+}
+
+@mixin spacing-padding-top($size-name: 'md') {
+  @include spacing-abstract('padding-top', $size-name);
+}
+
+@mixin spacing-padding-right($size-name: 'md') {
+  @include spacing-abstract('padding-right', $size-name);
+}
+
+@mixin spacing-padding-bottom($size-name: 'md') {
+  @include spacing-abstract('padding-bottom', $size-name);
+}
+
+@mixin spacing-padding-left($size-name: 'md') {
+  @include spacing-abstract('padding-left', $size-name);
+}
+
+@mixin spacing-margin($size-name: 'md') {
+  @include spacing-abstract('margin-top', $size-name);
+  @include spacing-abstract('margin-right', $size-name);
+  @include spacing-abstract('margin-bottom', $size-name);
+  @include spacing-abstract('margin-left', $size-name);
+}
+
+@mixin spacing-padding($size-name: 'md') {
+  @include spacing-abstract('padding-top', $size-name);
+  @include spacing-abstract('padding-right', $size-name);
+  @include spacing-abstract('padding-bottom', $size-name);
+  @include spacing-abstract('padding-left', $size-name);
+}

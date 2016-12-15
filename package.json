@@ -1,0 +1,37 @@
+{
+  "name": "spejson",
+  "version": "1.0.0",
+  "main": "src/index.scss",
+  "description": "Responsive spacing mixins and utility classes",
+  "keywords": [
+    "spacing",
+    "responsive",
+    "sass",
+    "utility"
+  ],
+  "author": "Dawid Karabin <mail@hinok.net>",
+  "license": "MIT",
+  "scripts": {
+    "assets": "cp node_modules/normalize.css/normalize.css demo/normalize.css",
+    "backstop-reference": "backstop reference",
+    "backstop-test": "backstop test",
+    "vr:build": "run-s assets serve-ci:start backstop-reference serve-ci:stop",
+    "vr:test": "run-s assets serve-ci:start backstop-test serve-ci:stop",
+    "build:scss": "node-sass -r --output-style nested demo/*.scss -o demo",
+    "watch:scss": "node-sass -w -r --output-style nested demo/*.scss -o demo",
+    "serve": "live-server ./ --open=demo --port=8000 --ignore=node_modules",
+    "serve-ci:start": "forever start server-ci.js",
+    "serve-ci:stop": "forever stopall",
+    "ci": "run-s assets build:scss vr:test",
+    "watch": "run-p assets watch:scss serve"
+  },
+  "dependencies": {
+    "backstopjs": "^2.3.5",
+    "express": "^4.14.0",
+    "forever": "^0.15.3",
+    "live-server": "^1.1.0",
+    "node-sass": "^4.0.0",
+    "normalize.css": "^5.0.0",
+    "npm-run-all": "^3.1.2"
+  }
+}

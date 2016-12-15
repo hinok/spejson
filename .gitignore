@@ -1,0 +1,7 @@
+/node_modules
+npm-debug.log
+
+/backstop_data/bitmaps_test
+/backstop_data/html_report
+/demo/index.css
+/demo/normalize.css

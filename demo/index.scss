@@ -1,0 +1,34 @@
+@function em-calc($val) {
+  @return $val / 16px * 1em;
+}
+
+$spacing-bp: (
+  'tablet-portrait': em-calc(600px),
+  'tablet-landscape': em-calc(900px),
+  'desktop': em-calc(1200px),
+  'big-desktop': em-calc(1800px)
+);
+
+@import './../src/index';
+
+@include generate-spacing-center();
+@include generate-spacing-reset();
+@include generate-spacing-margin();
+@include generate-spacing-padding();
+
+$test-size-names: xs, sm, md, lg, xl;
+
+@each $size-name in $test-size-names {
+  .custom-mt-#{$size-name} { @include spacing-margin-top($size-name); }
+  .custom-mr-#{$size-name} { @include spacing-margin-right($size-name); }
+  .custom-mb-#{$size-name} { @include spacing-margin-bottom($size-name); }
+  .custom-ml-#{$size-name} { @include spacing-margin-left($size-name); }
+
+  .custom-pt-#{$size-name} { @include spacing-padding-top($size-name); }
+  .custom-pr-#{$size-name} { @include spacing-padding-right($size-name); }
+  .custom-pb-#{$size-name} { @include spacing-padding-bottom($size-name); }
+  .custom-pl-#{$size-name} { @include spacing-padding-left($size-name); }
+
+  .custom-m-#{$size-name} { @include spacing-margin($size-name); }
+  .custom-p-#{$size-name} { @include spacing-padding($size-name); }
+}

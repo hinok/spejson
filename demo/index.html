@@ -1,0 +1,258 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Demo - Spejson</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="index.css">
+
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+          }
+
+          .container {
+            font-size: 0;
+          }
+
+          h1 { font-size: 48px; }
+          h2 { font-size: 42px; }
+          h3 { font-size: 36px; }
+          h4 { font-size: 28px; }
+          h5 { font-size: 21px; }
+          h6 { font-size: 16px; }
+
+          .one-line {
+            overflow: auto;
+          }
+
+          .one-line > div {
+            float: left;
+          }
+
+          .box,
+          .test-block {
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+
+          .box {
+            width: 50px;
+            height: 50px;
+            background: darkslateblue;
+            color: #fff;
+            line-height: 50px;
+            text-align: center;
+          }
+
+          [class^="box u-p"],
+          [class^="box custom-p"] {
+            margin: 1px;
+          }
+
+          .test-block {
+            width: 100px;
+            height: 100px;
+            background: deeppink;
+            color: #fff;
+            line-height: 100px;
+            text-align: center;
+          }
+        </style>
+    </head>
+    <body>
+        <h1>.u- classes</h1>
+        <div class="container">
+          <h2>margin-top</h2>
+          <div class="test-block">test</div>
+          <div class="box u-mt-xs">xs</div>
+          <div class="box u-mt-sm">sm</div>
+          <div class="box u-mt-md">md</div>
+          <div class="box u-mt-lg">lg</div>
+          <div class="box u-mt-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>margin-right</h2>
+          <div class="one-line">
+            <div class="box u-mr-xs">xs</div>
+            <div class="box u-mr-sm">sm</div>
+            <div class="box u-mr-md">md</div>
+            <div class="box u-mr-lg">lg</div>
+            <div class="box u-mr-xl">xl</div>
+            <div class="test-block">test</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <h2>margin-bottom</h2>
+          <div class="box u-mb-xs">xs</div>
+          <div class="box u-mb-sm">sm</div>
+          <div class="box u-mb-md">md</div>
+          <div class="box u-mb-lg">lg</div>
+          <div class="box u-mb-xl">xl</div>
+          <div class="test-block">test</div>
+        </div>
+
+        <div class="container">
+          <h2>margin-left</h2>
+          <div class="one-line">
+            <div class="test-block">test</div>
+            <div class="box u-ml-xs">xs</div>
+            <div class="box u-ml-sm">sm</div>
+            <div class="box u-ml-md">md</div>
+            <div class="box u-ml-lg">lg</div>
+            <div class="box u-ml-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>padding-top</h2>
+          <div class="box u-pt-xs">xs</div>
+          <div class="box u-pt-sm">sm</div>
+          <div class="box u-pt-md">md</div>
+          <div class="box u-pt-lg">lg</div>
+          <div class="box u-pt-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>padding-right</h2>
+          <div class="one-line">
+            <div class="box u-pr-xs">xs</div>
+            <div class="box u-pr-sm">sm</div>
+            <div class="box u-pr-md">md</div>
+            <div class="box u-pr-lg">lg</div>
+            <div class="box u-pr-xl">xl</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <h2>padding-bottom</h2>
+          <div class="box u-pb-xs">xs</div>
+          <div class="box u-pb-sm">sm</div>
+          <div class="box u-pb-md">md</div>
+          <div class="box u-pb-lg">lg</div>
+          <div class="box u-pb-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>padding-left</h2>
+          <div class="one-line">
+            <div class="box u-pl-xs">xs</div>
+            <div class="box u-pl-sm">sm</div>
+            <div class="box u-pl-md">md</div>
+            <div class="box u-pl-lg">lg</div>
+            <div class="box u-pl-xl">xl</div>
+        </div>
+
+        <h1>.custom- classes</h1>
+        <div class="container">
+          <h2>margin-top</h2>
+          <div class="test-block">test</div>
+          <div class="box custom-mt-xs">xs</div>
+          <div class="box custom-mt-sm">sm</div>
+          <div class="box custom-mt-md">md</div>
+          <div class="box custom-mt-lg">lg</div>
+          <div class="box custom-mt-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>margin-right</h2>
+          <div class="one-line">
+            <div class="box custom-mr-xs">xs</div>
+            <div class="box custom-mr-sm">sm</div>
+            <div class="box custom-mr-md">md</div>
+            <div class="box custom-mr-lg">lg</div>
+            <div class="box custom-mr-xl">xl</div>
+            <div class="test-block">test</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <h2>margin-bottom</h2>
+          <div class="box custom-mb-xs">xs</div>
+          <div class="box custom-mb-sm">sm</div>
+          <div class="box custom-mb-md">md</div>
+          <div class="box custom-mb-lg">lg</div>
+          <div class="box custom-mb-xl">xl</div>
+          <div class="test-block">test</div>
+        </div>
+
+        <div class="container">
+          <h2>margin-left</h2>
+          <div class="one-line">
+            <div class="test-block">test</div>
+            <div class="box custom-ml-xs">xs</div>
+            <div class="box custom-ml-sm">sm</div>
+            <div class="box custom-ml-md">md</div>
+            <div class="box custom-ml-lg">lg</div>
+            <div class="box custom-ml-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>margin</h2>
+          <div class="one-line">
+            <div class="test-block">test</div>
+            <div class="box custom-m-xs">xs</div>
+            <div class="box custom-m-sm">sm</div>
+            <div class="box custom-m-md">md</div>
+            <div class="box custom-m-lg">lg</div>
+            <div class="box custom-m-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>padding-top</h2>
+          <div class="box custom-pt-xs">xs</div>
+          <div class="box custom-pt-sm">sm</div>
+          <div class="box custom-pt-md">md</div>
+          <div class="box custom-pt-lg">lg</div>
+          <div class="box custom-pt-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>padding-right</h2>
+          <div class="one-line">
+            <div class="box custom-pr-xs">xs</div>
+            <div class="box custom-pr-sm">sm</div>
+            <div class="box custom-pr-md">md</div>
+            <div class="box custom-pr-lg">lg</div>
+            <div class="box custom-pr-xl">xl</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <h2>padding-bottom</h2>
+          <div class="box custom-pb-xs">xs</div>
+          <div class="box custom-pb-sm">sm</div>
+          <div class="box custom-pb-md">md</div>
+          <div class="box custom-pb-lg">lg</div>
+          <div class="box custom-pb-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>padding-left</h2>
+          <div class="one-line">
+            <div class="box custom-pl-xs">xs</div>
+            <div class="box custom-pl-sm">sm</div>
+            <div class="box custom-pl-md">md</div>
+            <div class="box custom-pl-lg">lg</div>
+            <div class="box custom-pl-xl">xl</div>
+        </div>
+
+        <div class="container">
+          <h2>padding</h2>
+          <div class="one-line">
+            <div class="box custom-p-xs">xs</div>
+            <div class="box custom-p-sm">sm</div>
+            <div class="box custom-p-md">md</div>
+            <div class="box custom-p-lg">lg</div>
+            <div class="box custom-p-xl">xl</div>
+        </div>
+    </body>
+</html>

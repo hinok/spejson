@@ -1,0 +1,55 @@
+{
+  "id": "ci",
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 9999
+    },
+    {
+      "name": "tablet-portrait",
+      "width": 600,
+      "height": 9999
+    },
+    {
+      "name": "tablet-landscape",
+      "width": 900,
+      "height": 9999
+    },
+    {
+      "name": "desktop",
+      "width": 1200,
+      "height": 9999
+    },
+    {
+      "name": "big-desktop",
+      "width": 1800,
+      "height": 9999
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Default",
+      "url": "http://localhost:8000/index.html",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "document"
+      ],
+      "readyEvent": null,
+      "delay": 200,
+      "misMatchThreshold" : 0.1
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "casper_scripts": "backstop_data/casper_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "casperFlags": [],
+  "engine": "phantomjs",
+  "report": ["browser", "ci"],
+  "debug": false
+}
