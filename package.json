@@ -35,7 +35,7 @@
     "ci": "run-s build:scss vr:test",
     "watch": "run-p assets watch:scss serve"
   },
-  "dependencies": {
+  "devDependencies": {
     "backstopjs": "^2.3.5",
     "express": "^4.14.0",
     "forever": "^0.15.3",
